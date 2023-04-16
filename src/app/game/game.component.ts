@@ -12,11 +12,10 @@ import { EditPlayerComponent } from '../edit-player/edit-player.component';
   styleUrls: ['./game.component.scss']
 })
 export class GameComponent implements OnInit{
-  /* pickCardAnimation = false;
-  currentCard: string = ''; */
   game: Game;
   gameId: string;
   docRef: any;
+  gameOver = false;
 
   constructor(private route: ActivatedRoute, 
     private firestore: Firestore, public dialog: MatDialog
@@ -46,19 +45,23 @@ export class GameComponent implements OnInit{
   }
 
   takeCard() {
-    if(!this.game.pickCardAnimation) {
-      this.game.currentCard = this.game.stack.pop();
-      this.game.pickCardAnimation = true;
+    if(this.game.stack.length == 0) {
+      this.gameOver = true;
+    } else {
+      if(!this.game.pickCardAnimation) {
+        this.game.currentCard = this.game.stack.pop();
+        this.game.pickCardAnimation = true;
 
-      this.game.currentPlayer++;
-      this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;
-      this.saveGame();
-
-      setTimeout(() => {
-        this.game.pickCardAnimation = false;
-        this.game.playedCards.push(this.game.currentCard);
+        this.game.currentPlayer++;
+        this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;
         this.saveGame();
-      }, 1000);
+
+        setTimeout(() => {
+          this.game.pickCardAnimation = false;
+          this.game.playedCards.push(this.game.currentCard);
+          this.saveGame();
+        }, 1000);
+      }
     }
   }
 
