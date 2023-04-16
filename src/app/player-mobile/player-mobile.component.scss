@@ -1,19 +1,20 @@
 .player {
-    width: 280px;
+    width: 100px;
+    height: 75px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
     background-color: rgb(50, 50, 50, 0.8);
-    border-radius: 0 50px 50px 0;
+    border-radius: 0px 0px 50px 50px;
 
     span {
-        margin-left: 16px;
-        font-size: 32px;
+        font-size: 14px;
     }
 
     img {
-        height: 70px;
-        width: 70px;
+        height: 35px;
+        width: 35px;
         object-fit: cover;
         border-radius: 50%;
     }

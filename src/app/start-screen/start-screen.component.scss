@@ -8,11 +8,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     img {
-        /* height: 100vh; */
+        height: 100vh;
         max-height: 100%;
-        max-width: 100%;
+        /* max-width: 100%; */
     }
 }
 
@@ -29,8 +30,22 @@
 
     img {
         height: auto;
-        width: 40vw;
+        width: 500px;
         cursor: pointer;
+
+        /* ========== RESPONSIVE ========== */
+        @media ((max-height:760px) OR (max-width:525px)) {
+            width: 400px;
+        }
+
+        @media ((max-height:580px) OR (max-width:455px)) {
+            width: 300px;
+        }
+
+        @media ((max-height:430px) OR (max-width:325px)) {
+            width: 200px;
+        }
+        /* ========== RESPONSIVE ========== */
 
         &:hover {
             filter: brightness(1.25);

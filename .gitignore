@@ -48,4 +48,3 @@ up.sh
 .firebase
 *-debug.log
 .runtimeconfig.json
-src/environments/*
