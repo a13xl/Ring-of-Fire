@@ -15,6 +15,9 @@
 <div *ngIf="!gameOver" >
     <div class="field">
         <div class="card-stack">
+            <!-- Preload Image -->
+            <img class="preload-img" src="assets/img/cards/{{ game.stack[game.stack.length - 1] }}.png">
+
             <!-- Card Deck -->
             <img *ngFor="let c of [0,1,2,3]; let i = index;" [ngStyle]="{'right.px': i * 5}" 
                 src="assets/img/cards/card_cover.png">
