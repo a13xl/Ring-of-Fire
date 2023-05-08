@@ -1,0 +1,95 @@
+.main {
+    height: 100vh;
+    max-height: 100%;
+    width: 100vw;
+    max-width: 100%;
+
+    background-color: #404040;
+    color: white;
+    display: flex;
+    justify-content: center;
+    /* padding: 100px 0; */
+}
+
+.container-bg {
+    width: 680px;
+    padding: 15px;
+    background-image: linear-gradient(to bottom, #c09100, #c99800, #d29f00, #dca700, #e5ae00, #F2B800, #e5ae00, #e5ae00, #dca700, #d29f00, #c99800, #c09100);
+    display: flex;
+    justify-content: center;
+}
+
+#legal-notice {
+    width: 580px;
+    padding: 50px;
+    background-image: linear-gradient(to bottom, #86000f, #9b0013, #b10016, #c7011a, #dd021d, #dd021d, #dd021d, #dd021d, #c7011a, #b10016, #9b0013, #86000f);
+    overflow-y: auto;
+
+    button {
+        position: fixed;
+        top: 30px;
+        right: 50px;
+
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        img {
+            height: 50px;
+        }
+    }
+}
+
+a {
+    color: #ffed00;
+}
+
+/* ===== Scrollbar ===== */
+/* width */
+::-webkit-scrollbar,#subtask-container::-webkit-scrollbar, textarea::-webkit-scrollbar{
+    width: 10px;
+  }
+  
+  /* Track */
+::-webkit-scrollbar-track,#subtask-container::-webkit-scrollbar-track,textarea::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+   
+  /* Handle */
+::-webkit-scrollbar-thumb,#subtask-container::-webkit-scrollbar-thumb,textarea::-webkit-scrollbar-thumb {
+    background: #F2B800; 
+    border-radius: 10px;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover,#subtask-container::-webkit-scrollbar-thumb:hover,textarea::-webkit-scrollbar-thumb:hover {
+    background: #ffed00; 
+}
+
+@media (max-width: 710px) {
+    .container-bg {
+        width: 100%;
+    }
+
+    #legal-notice {
+        width: unset;
+    }
+}
+
+@media (max-width: 625px) {
+    #legal-notice {
+        padding: 50px 10px;
+    }
+}
+
+@media (max-width: 585px) {
+    .container-bg {
+        padding: 15px 0;
+    }
+}

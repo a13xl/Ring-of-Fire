@@ -52,3 +52,20 @@
         }
     }
 }
+
+.imprint {
+    position: fixed;
+    bottom: 30px;
+    
+
+    button {
+        font-size: 16px;
+        color: white;
+        font-weight: bold;
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+
+        z-index: 9;
+    }
+}

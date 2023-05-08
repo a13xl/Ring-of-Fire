@@ -23,4 +23,8 @@ export class StartScreenComponent {
     
 
   }
+
+  legalNotice() {
+    this.router.navigateByUrl('/legal-notice');
+  }
 }
